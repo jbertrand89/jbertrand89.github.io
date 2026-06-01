@@ -133,3 +133,60 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* ---------- Responsive ---------- */
+
+/* Make images and embedded media fluid by default */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  /* Keep the main wrapper edge-to-edge with small gutters */
+  body td[style*="padding:2.5%"] {
+    padding: 16px !important;
+  }
+
+  /* Header: stack the intro text and the profile photo */
+  td[style*="width:63%"],
+  td[style*="width:40%"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  td[style*="width:40%"] img {
+    width: auto !important;
+    max-width: 220px !important;
+    margin: 0 auto;
+  }
+
+  /* Publications: stack the thumbnail above the text */
+  td[style*="width:25%"],
+  td[style*="width:75%"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  td[style*="width:25%"] .one {
+    margin: 0 auto;
+  }
+
+  /* Slightly smaller name on small screens */
+  .name {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 400px) {
+  .name {
+    font-size: 22px;
+  }
+}
